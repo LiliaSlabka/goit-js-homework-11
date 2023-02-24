@@ -4,6 +4,7 @@ import Notiflix from "notiflix";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
+
 const searchForm = document.querySelector(`.search-form`)
 const gallery = document.querySelector(`.gallery`)
 const loadMoreBtn = document.querySelector(`.load-more`)
@@ -46,7 +47,7 @@ async function onFormSubmit(event){
 };
 
 async function onLoadMoreBtn() {
-  currentPage =+ 1; 
+  currentPage +=1; 
 
   const response = await fetchImages(searchQuery, currentPage);
   const hits = await response.hits
