@@ -14,7 +14,6 @@ let simpleLightBox;
 let currentPage = 1;
 let searchQuery = '';
 
-
 searchForm.addEventListener(`submit`, onFormSubmit);
 loadMoreBtn.addEventListener(`click`, onLoadMoreBtn);
 
@@ -90,8 +89,8 @@ function displayImageInfo(images) {
 </div>`;
   }
   )
-        .join('');
-      gallery.innerHTML = markup;   
+        .join('');  
+  gallery.insertAdjacentHTML('beforeend',markup)
 };
 
 function clearGallery() {
@@ -100,4 +99,3 @@ function clearGallery() {
 function resetPage() {
     currentPage = 1;
 };
-
